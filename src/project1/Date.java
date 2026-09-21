@@ -117,5 +117,24 @@ public class Date implements Comparable<Date>  {
     public String toString(){
         return String.format("%04d-%02d-%02d", year, month, day);
     }
+    public static void main(String[] args) {
 
+        Date test1 = new Date(2025, 2, 29);
+        System.out.println("Test 1: " + test1 + " -> " + test1.isValid());
+
+        Date test2 = new Date(2026, 4, 31);
+        System.out.println("Test 2: " + test2 + " -> " + test2.isValid());
+
+        Date test3 = new Date(2026, 13, 10);
+        System.out.println("Test 3: " + test3 + " -> " + test3.isValid());
+
+        Date test4 = new Date(2026, 5, 0);
+        System.out.println("Test 4: " + test4 + " -> " + test4.isValid());
+
+        Date test5 = new Date(2024, 2, 29);
+        System.out.println("Test 5: " + test5 + " -> " + test5.isValid());
+
+        Date test6 = new Date(2026, 12, 31);
+        System.out.println("Test 6: " + test6 + " -> " + test6.isValid());
+    }
 }
