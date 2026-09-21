@@ -106,11 +106,9 @@ public class Date implements Comparable<Date>  {
             return true;
         }
 
-        if (!(obj instanceof Date)) {
+        if (!(obj instanceof Date other)) {
             return false;
         }
-
-        Date other = (Date) obj;
 
         return year == other.year && month == other.month && day == other.day;
     }
